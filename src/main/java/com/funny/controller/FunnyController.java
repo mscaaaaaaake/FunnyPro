@@ -25,9 +25,10 @@ public class FunnyController extends HttpServlet{
         writer.println("<html><body>");
         if (account == null || password == null) {
             writer.println("<p>miss account or password</p>");
+            writer.println("<p>hao e</p>");
         }else{
             if(account.equals("admin") && password.equals("123456")) {
-                writer.println("<p>welcome,"+account+"</p>");
+                writer.println("<h2>welcome,"+account+"</h2>");
             }else{
                 writer.println("<p>you got the wrong account or password</p>");
             }
