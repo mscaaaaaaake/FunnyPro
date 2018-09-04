@@ -31,9 +31,8 @@ public class FunnyController extends HttpServlet{
             }else{
                 writer.println("<p>you got the wrong account or password</p>");
             }
-            writer.println("</body></html>");
         }
-
+        writer.println("</body></html>");
     }
 
 }
