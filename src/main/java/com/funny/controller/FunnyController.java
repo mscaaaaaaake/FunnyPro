@@ -22,26 +22,21 @@ public class FunnyController extends HttpServlet{
         PrintWriter writer = response.getWriter();
         String account = request.getParameter("account");
         String password = request.getParameter("password");
+        writer.println("<html><body>");
         if (account == null || password == null) {
-            writer.println("<html><body>");
             writer.println("<p>miss account or password</p>");
-            writer.println("</body></html>");
         }else{
             if(account.equals("admin") && password.equals("123456")) {
-                writer.println("<html><body>");
                 writer.println("<p>welcome,"+account+"</p>");
-                writer.println("</body></html>");
             }else{
                 if(!account.equals("admin")) {
-                    writer.println("<html><body>");
                     writer.println("<p>you got the wrong account</p>");
-                    writer.println("</body></html>");
-                }else if(!account.equals("123456")){
-                    writer.println("<html><body>");
+                }
+                if(!account.equals("123456")){
                     writer.println("<p>you got the wrong password</p>");
-                    writer.println("</body></html>");
                 }
             }
+            writer.println("</body></html>");
         }
 
     }
