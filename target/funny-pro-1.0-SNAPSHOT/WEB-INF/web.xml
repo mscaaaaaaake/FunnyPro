@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <servlet>
+    <description>Cocoon blocks dispatcher</description>
+    <display-name>DispatcherServlet</display-name>
+    <servlet-name>DispatcherServlet</servlet-name>
+    <servlet-class>com.funny.controller.FunnyController</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <!-- URL space mappings ============================================= -->
+
+  <!--
+    - Cocoon handles all the URL space assigned to the webapp using its sitemap.
+    - It is recommended to leave it unchanged. Under some circumstances though
+    - (like integration with proprietary webapps or servlets) you might have
+    - to change this parameter.
+    -->
+  <servlet-mapping>
+    <servlet-name>DispatcherServlet</servlet-name>
+    <url-pattern>/*</url-pattern>
+  </servlet-mapping>
+</web-app>
