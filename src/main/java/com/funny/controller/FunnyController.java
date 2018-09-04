@@ -29,6 +29,7 @@ public class FunnyController extends HttpServlet{
         }else{
             if(account.equals("admin") && password.equals("123456")) {
                 writer.println("<h2>welcome,"+account+"</h2>");
+                writer.println("<p>xiangchirou</p>");
             }else{
                 writer.println("<p>you got the wrong account or password</p>");
             }
